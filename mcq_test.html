@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	
+</head>
+<body>
+<header class="header">
+    <div class="container header-container">
+        <h1 class="logo">QPaperGen - MCQ Test</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Generate Paper</a>
+            <a href="answer.html" class="nav-link">Solutions</a>
+            <a href="mcq_test.html" class="nav-link">MCQ Test</a> <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <h2>Challenge Yourself with MCQ Tests</h2>
+        <p>Test your knowledge across various subjects and topics. Get instant results and detailed feedback.</p>
+        <a href="#test-controls" class="btn-primary">Start Your Test</a> </div>
+</section>
+
+
+    <main class="container main-content">
+        <h2>Take Your MCQ Test</h2>
+
+        <div id="test-controls" class="test-controls">
+            <label for="num-questions">Number of Questions:</label>
+            <input type="number" id="num-questions" value="5" min="1" max="20">
+            
+            <select id="mcq-class-filter">
+                <option value="">All Classes</option>
+            </select>
+
+            <select id="mcq-subject-filter">
+                <option value="">All Subjects</option>
+            </select>
+
+            <select id="mcq-topic-filter">
+                <option value="">All Topics</option>
+            </select>
+
+            <select id="mcq-year-filter">
+                <option value="">All Years</option>
+            </select>
+            <button onclick="startTest()">Start Test</button>
+        </div>
+
+        <div id="test-container" style="display: none;">
+            <div id="question-display" class="question-item">
+                <p id="question-number"></p>
+                <p id="question-content"></p>
+                <div id="options-container" class="options-grid">
+                    </div>
+            </div>
+
+            <div class="test-navigation">
+                <button id="prev-question-button" onclick="navigateQuestion(-1)" disabled>Previous</button>
+                <button id="next-question-button" onclick="navigateQuestion(1)">Next</button>
+                <button id="submit-test-button" onclick="submitTest()" style="display: none;">Submit Test</button>
+            </div>
+            <div class="timer-container">
+              Time Left: <span id="timer">00:00</span>
+            </div>
+        </div>
+
+        <div id="result-container" style="display: none;">
+            <h2>Test Results</h2>
+            <p>Score: <span id="score"></span> / <span id="total-questions"></span></p>
+            <p>Percentage: <span id="percentage"></span>%</p>
+            <div id="detailed-results">
+                </div>
+            <button onclick="retakeTest()">Retake Test</button>
+            <button onclick="window.location.href='answer.html'">View All Solutions</button>
+        </div>
+    </main>
+
+    <footer id="about" class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2025 QPaperGen. All rights reserved.</p>
+            <p>Made with ❤️ for educators and students.</p>
+            <p>Contact: <a href="mailto:support@qpapergen.com">support@qpapergen.com</a></p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="mcq_test_script.js"></script>
+</body>
+</html>

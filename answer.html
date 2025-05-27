@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Question Paper Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container header-container">
+        <h1 class="logo">QPaperGen</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Generate Paper</a>
+            <a href="answer.html" class="nav-link">Solutions</a> <a href="mcq_test.html" class="nav-link">MCQ Test</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </div>
+</header>
+  
+  <section class="hero">
+    <div class="container hero-content">
+        <h2>Unlock Solutions and Detailed Explanations</h2>
+        <p>Dive deep into answers for your questions. Search, filter, and understand every concept thoroughly.</p>
+        <a href="#solutions" class="btn-primary">Explore Solutions</a> </div>
+</section>
+
+
+ <main id="solutions" class="container main-content">
+    <h2>Search Solutions </h2>
+    <div class="search-container">
+      <input type="text" id="solution-search-input" placeholder="Search questions...">
+      
+      <select id="class-filter">
+        <option value="">All Classes</option>
+        </select>
+
+      <select id="subject-filter">
+        <option value="">All Subjects</option>
+      </select>
+
+      <select id="topic-filter">
+        <option value="">All Topics</option>
+      </select>
+
+      <select id="year-filter">
+        <option value="">All Years</option>
+      </select>
+
+      <select id="type-filter">
+        <option value="">All Types</option>
+      </select>
+
+      <button onclick="searchSolutions()">Search</button>
+    </div>
+	
+  <div id="solution-list" class="question-list" aria-live="polite" aria-label="Question Solutions"></div>
+
+    <div class="pagination">
+        <button id="prev-page-button" onclick="changePage(-1)" disabled>Previous</button>
+        <span id="page-info">Page 1 of 1</span>
+        <button id="next-page-button" onclick="changePage(1)" disabled>Next</button>
+    </div>
+</main>
+
+  <footer id="about" class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 QPaperGen. All rights reserved.</p>
+      <p>Made with ❤️ for educators and students.</p>
+      <p>Contact: <a href="mailto:support@qpapergen.com">support@qpapergen.com</a></p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script> <script src="answer_script.js"></script>
+</body>
+</html>

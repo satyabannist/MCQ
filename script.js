@@ -290,6 +290,17 @@ document.getElementById("manual-type").addEventListener("change", function () {
   const type = this.value;
   document.getElementById("manual-options").style.display = type === "mcq" ? "block" : "none";
 });
+// Add this part to ensure options are visible if MCQ is default on load
+document.addEventListener("DOMContentLoaded", function() {
+    const manualTypeSelect = document.getElementById("manual-type");
+    const manualOptionsDiv = document.getElementById("manual-options");
+
+    // Check if the default selected option is "mcq" on page load
+    if (manualTypeSelect.value === "mcq") {
+        manualOptionsDiv.style.display = "block";
+    }
+});
+
 
 function addManualQuestion() {
   const content = document.getElementById("manual-question").value.trim();

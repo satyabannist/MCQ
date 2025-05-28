@@ -64,11 +64,7 @@
 
 <section id="manual-input" class="container main-content" style="margin-top: 30px;">
   <h2>Add a Custom Question</h2>
-  <div class="input-group">
-    <label for="manual-question">Question Content (supports LaTeX):</label>
-    <textarea id="manual-question" rows="4" placeholder="Enter your question here..."></textarea>
-  </div>
-  <div class="input-group">
+    <div class="input-group">
     <label for="manual-type">Type:</label>
     <select id="manual-type">
       <option value="mcq">MCQ</option>
@@ -76,6 +72,12 @@
       <option value="long">Long</option>
     </select>
   </div>
+  
+  <div class="input-group">
+    <label for="manual-question">Question Content (supports LaTeX):</label>
+    <textarea id="manual-question" rows="4" placeholder="Enter your question here..."></textarea>
+  </div>
+
   <div class="input-group" id="manual-options" style="display: none;">
     <label>Options (for MCQ):</label>
     <input type="text" placeholder="Option A" id="opt-a" />

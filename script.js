@@ -1,5 +1,4 @@
 
-
 let selectedQuestions = [];
 let currentPage = 1;
 const questionsPerPage = 6; // Number of questions to display per page

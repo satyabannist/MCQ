@@ -303,6 +303,25 @@ body {
     background: #c82333;
 }
 
+/* In manual question input add question button */
+
+.add-question-button {
+    background-color: #1abc9c; /* Green color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Added for spacing */
+}
+
+.add-question-button:hover {
+    background-color: #16a085; /* Darker green on hover */
+}
+
+
 /* Pagination Controls */
 .pagination {
     display: flex;
